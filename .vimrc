@@ -1,5 +1,5 @@
 " Cool files
-:au BufNewFile,BufRead *.cool setf cool 
+au BufNewFile,BufRead *.cool setf cool 
 :cmap W w
 :cmap Q q
 :colorscheme delek
@@ -8,7 +8,13 @@ set tabstop=2
 
 " always uses spaces instead of tab characters
 set expandtab
-autocmd Filetype mkd setlocal spell
+augroup Markdown
+au Filetype mkd setlocal spell spelllang=en_us
+augroup END
+
+au BufRead,BufNewFile *.md setlocal spell spelllang=en_us
+au BufRead,BufNewFile *.md setlocal textwidth=80
+set complete+=kspell
 
 " size of an "indent"
 set shiftwidth=2
