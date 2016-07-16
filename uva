@@ -1,0 +1,9 @@
+#!/bin/bash
+# search string can be one of the following:
+# A University computing ID (e.g. mst3k)
+# A last name (e.g. Smith)
+# A last name, a first name (e.g. "Smith, Joe") {use quotes!}
+# A University telephone number
+# A University-wide email alias ("jsmith@Virginia.EDU") {use quotes!}
+# A numeric UNIX User ID (e.g. 499)
+whois -h whois.Virginia.EDU "$1" --verbose
