@@ -2,7 +2,8 @@
 My default settings for development. To install, read the [Makefile](/Makefile) and build the
 targets you desire. Usually, the following will be all you need:
 
-- `make deploy` sets up [bashrc](/bashrc) and [vimrc](/vimrc)
+- `make install` grabs the plugins, and sets up [bashrc](/bashrc) and [vimrc](/vimrc). run this command right after cloning the repository.
+- `make deploy` updates plugins and sets up [bashrc](/bashrc) and [vimrc](/vimrc). run this command anytime after installing the plugins with `make install`.
 - `make bin` sets up binaries from [/bin/](/bin) to your `$PATH` by putting them in `/usr/local/bin/`
 - `make debian` or `make arch` installs a bunch of handy packages I always end up installing one way or another... (Arch target doesn't include AUR installs)
 

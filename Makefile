@@ -1,4 +1,4 @@
-.PHONY: downstream upstream deploy vim bash bin plugins debian arch
+.PHONY: downstream upstream deploy vim bash bin plugins debian arch install git
 MSG=small edit (submodules updated, probably)
 REPO=dotfiles
 HR="-----------------------------------------------------------------------------------"
@@ -16,7 +16,9 @@ upstream: downstream
 	git commit -m "${MSG}"
 	git push
 
-deploy: downstream vim bash
+install: plugins deploy
+
+deploy: downstream vim bash git
 	@echo "\nDEPLOY\n${HR}"
 	@echo "dotfiles installed successfully."
 	@echo "\nrun 'make bin' to deploy binaries (requires root privileges!)"
@@ -29,15 +31,21 @@ vim: downstream
 	/bin/cp -r vim ~/.vim
 	@echo "vim directory installed."
 	@echo "deploying vim configuration..."
-	cp vimrc ~/.vimrc
+	/bin/cp vimrc ~/.vimrc
 	@echo ".vimrc installed. SPAWN A NEW TERMINAL INSTANCE TO SEE CHANGES."
 
 bash: downstream
 	@echo "\nBASH\n${HR}"
 	@echo "deploying bash configuration..."
-	cp bashrc ~/.bashrc
+	/bin/cp bashrc ~/.bashrc
 	. ~/.bashrc # source
 	@echo ".bashrc installed."
+
+git: downstream
+	@echo "\nGIT\n${HR}"
+	@echo "deploying git configuration..."
+	/bin/cp gitconfig ~/.gitconfig
+	@echo ".gitconfig installed."
 
 bin: downstream 
 	@echo "\nBINARIES\n${HR}"

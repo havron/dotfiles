@@ -1,0 +1,10 @@
+[user]
+	email = sgh7cc@virginia.edu
+	name = Samuel Havron
+[color]
+	ui = auto
+[core]
+	editor = vim
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
