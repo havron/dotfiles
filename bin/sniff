@@ -1,0 +1,5 @@
+#!/bin/bash
+# reports some very basic info on a given domain (first argument)
+whois $1 | grep -i creation
+curl -I http://$1
+curl -I https://$1

@@ -1,9 +1,14 @@
+" setup plugins
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
 "set tabstop=2
 " Cool files
 au BufNewFile,BufRead *.cool setf cool 
-:cmap W w
-:cmap Q q
-:colorscheme delek
+cmap W w
+cmap Q q
+colorscheme delek
 " size of a hard tabstop
 set tabstop=2
 
@@ -19,6 +24,10 @@ au BufRead,BufNewFile *.txt setlocal spell spelllang=en_us
 au BufRead,BufNewFile *.txt setlocal textwidth=80
 au BufRead,BufNewFile *.tex setlocal spell spelllang=en_us
 au BufRead,BufNewFile *.tex setlocal textwidth=80
+
+" OblivC 'support', without new keywords
+au BufRead,BufNewFile *.oc set filetype=c
+au BufRead,BufNewFile *.oh set filetype=c
 set complete+=kspell
 
 " size of an "indent"
@@ -27,7 +36,4 @@ set shiftwidth=2
 inoremap <S-Tab> <C-V><Tab>
 
 " sets the yank buffer to hold <400 lines (default is 50)
-:set viminfo='100,<400,s10,h
-call plug#begin('~/.vim/plugged')
-Plug 'rust-lang/rust.vim'
-call plug#end()
+set viminfo='100,<400,s10,h
