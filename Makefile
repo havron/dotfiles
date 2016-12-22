@@ -2,7 +2,7 @@
 MSG=small edit (submodules updated, probably)
 REPO=dotfiles
 HR="-----------------------------------------------------------------------------------"
-DEBIAN=vim git ruby ocaml texlive clang emacs24 vim nasm astyle tofrodos source-highlight gdb lldb doxygen doxygen-doc graphviz ddd git g++ python-gpgme gobjc gnustep gnustep-make gnustep-common libgnustep-base-dev evince pandoc
+DEBIAN=vim git ruby ocaml texlive clang emacs24 vim nasm astyle tofrodos source-highlight gdb lldb doxygen doxygen-doc graphviz ddd git g++ python-gpgme gobjc gnustep gnustep-make gnustep-common libgnustep-base-dev evince pandoc hollywood
 # for now, same as debian. AUR installs via `yaourt` not included.
 ARCH=${DEBIAN}
 
