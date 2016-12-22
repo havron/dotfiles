@@ -1,6 +1,9 @@
 [submodule "vim/bundle/rust.vim"]
 	path = vim/bundle/rust.vim
   url = https://github.com/rust-lang/rust.vim.git
+[submodule "vim/bundle/cool.vim"]
+	path = vim/bundle/cool.vim
+  url = https://github.com/vim-scripts/cool.vim
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git

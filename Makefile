@@ -55,6 +55,7 @@ plugins:
 	 curl -LSso ./vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 	git clone https://github.com/scrooloose/nerdtree.git ./vim/bundle/nerdtree
 	git clone --depth=1 https://github.com/rust-lang/rust.vim.git ./vim/bundle/rust.vim
+	git clone https://github.com/vim-scripts/cool.vim ./vim/bundle/cool.vim
 	git clone https://github.com/luochen1990/rainbow.git ./vim/bundle/rainbow
 	git clone https://github.com/scrooloose/nerdcommenter ./vim/bundle/nerdcommenter
 	git clone https://github.com/airblade/vim-gitgutter ./vim/bundle/vim-gitgutter

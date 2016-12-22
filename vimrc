@@ -8,11 +8,11 @@ filetype plugin indent on
 
 " helpful for commenter
 let mapleader = ","
-
+let g:gitgutter_enabled = 1
 " nice colorschemes
 colorscheme default
-" hi Search cterm=NONE ctermfg=grey ctermbg=blue
-" hi Visual ctermbg=
+" hi Visual ctermbg
+" works for now, but highlighting could be improved.
 hi Visual term=reverse cterm=reverse
 
 " set up rainbow (nested) parentheses
@@ -42,7 +42,6 @@ let g:rainbow_conf = {
   \   }
   \}
 
-"set tabstop=2
 " Cool files
 au BufNewFile,BufRead *.cool setf cool 
 
@@ -54,7 +53,6 @@ cmap Q q
 nnoremap B ^
 nnoremap E $
 
-"colorscheme delek
 " size of a hard tabstop
 set tabstop=2
 
