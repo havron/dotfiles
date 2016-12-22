@@ -55,7 +55,7 @@ plugins:
 	 curl -LSso ./vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 	git clone https://github.com/scrooloose/nerdtree.git ./vim/bundle/nerdtree
 	git clone --depth=1 https://github.com/rust-lang/rust.vim.git ./vim/bundle/rust.vim
-	git clone https://github.com/kien/rainbow_parentheses.vim.git ./vim/bundle/rainbow_parentheses.vim
+	git clone https://github.com/luochen1990/rainbow.git ./vim/bundle/rainbow
 
 
 debian: downstream
