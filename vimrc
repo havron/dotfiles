@@ -5,35 +5,43 @@ filetype plugin indent on
 
 " set up rainbow (nested) parentheses
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
- let g:rainbow_conf = {
-      \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-      \   'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
-      \   'operators': '_,_',
-      \   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
-      \   'separately': {
-      \       '*': {},
-      \       'tex': {
-      \           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
-      \       },
-      \       'lisp': {
-      \           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
-      \       },
-      \       'vim': {
-      \           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
-      \       },
-      \       'html': {
-      \           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
-      \       },
-      \       'css': 0,
-      \   }
-      \}
 
+" a bunch of default rainbow parens config
+ let g:rainbow_conf = {
+  \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+  \   'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+  \   'operators': '_,_',
+  \   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+  \   'separately': {
+  \       '*': {},
+  \       'tex': {
+  \           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+  \       },
+  \       'lisp': {
+  \           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+  \       },
+  \       'vim': {
+  \           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+  \       },
+  \       'html': {
+  \           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+  \       },
+  \       'css': 0,
+  \   }
+  \}
 
 "set tabstop=2
 " Cool files
 au BufNewFile,BufRead *.cool setf cool 
+
+" hacky WQ => wq mapping, but good enough for my purposes.
 cmap W w
 cmap Q q
+" move to beginning/end of line, just use lower 'e' and 'b' for normal word
+" navigation
+nnoremap B ^
+nnoremap E $
+
 colorscheme delek
 " size of a hard tabstop
 set tabstop=2
@@ -63,3 +71,4 @@ inoremap <S-Tab> <C-V><Tab>
 
 " sets the yank buffer to hold <400 lines (default is 50)
 set viminfo='100,<400,s10,h
+
