@@ -7,3 +7,9 @@
 [submodule "vim/bundle/rainbow"]
 	path = vim/bundle/rainbow
   url = https://github.com/luochen1990/rainbow.git
+[submodule "vim/bundle/nerdcommenter"]
+	path = vim/bundle/nerdcommenter
+  url = git clone https://github.com/scrooloose/nerdcommenter
+[submodule "vim/bundle/vim-gitgutter"]
+	path = vim/bundle/vim-gitgutter
+  url = git clone git clone https://github.com/airblade/vim-gitgutter

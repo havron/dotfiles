@@ -3,13 +3,25 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+" for tree directory if desired...
+" autocmd vimenter * NERDTree
+
+" helpful for commenter
+let mapleader = ","
+
+" nice colorschemes
+colorscheme default
+" hi Search cterm=NONE ctermfg=grey ctermbg=blue
+" hi Visual ctermbg=
+hi Visual term=reverse cterm=reverse
+
 " set up rainbow (nested) parentheses
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 
 " a bunch of default rainbow parens config
- let g:rainbow_conf = {
+let g:rainbow_conf = {
   \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-  \   'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+  \   'ctermfgs': ['darkblue', 'darkyellow', 'darkcyan', 'darkmagenta', 'brown'],
   \   'operators': '_,_',
   \   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
   \   'separately': {
@@ -42,7 +54,7 @@ cmap Q q
 nnoremap B ^
 nnoremap E $
 
-colorscheme delek
+"colorscheme delek
 " size of a hard tabstop
 set tabstop=2
 
@@ -59,9 +71,22 @@ au BufRead,BufNewFile *.txt setlocal textwidth=80
 au BufRead,BufNewFile *.tex setlocal spell spelllang=en_us
 au BufRead,BufNewFile *.tex setlocal textwidth=80
 
-" OblivC 'support', without new keywords
-au BufRead,BufNewFile *.oc set filetype=c
-au BufRead,BufNewFile *.oh set filetype=c
+" OblivC 'support'
+" Adding these lines in .vimrc usually helps with .oc and .oh files
+
+function SetOblivcOptions()
+  " Hijack C syntax highlighting and indenting
+  set filetype=c
+  syn match ocConditional "\<obliv\s\+if\>"
+  syn keyword cType frozen
+  syn match ocOblivType "\<obliv\>\(\s\+if\>\)\@!"
+  syn match cStatement "\~obliv\>"
+  hi def link ocConditional Conditional
+  hi def link ocOblivType Type
+endfunction
+
+autocmd BufNewFile,BufRead *.o[ch] call SetOblivcOptions()
+
 set complete+=kspell
 
 " size of an "indent"
@@ -71,4 +96,3 @@ inoremap <S-Tab> <C-V><Tab>
 
 " sets the yank buffer to hold <400 lines (default is 50)
 set viminfo='100,<400,s10,h
-
