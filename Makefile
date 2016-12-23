@@ -27,8 +27,7 @@ deploy: downstream vim bash git
 vim: downstream
 	@echo "\nVIM\n${HR}"
 	@echo "deploying vim directory..."
-	/bin/rm -rf ~/.vim
-	/bin/cp -r vim ~/.vim
+	/bin/cp -ur vim ~/.vim
 	@echo "vim directory installed."
 	@echo "deploying vim configuration..."
 	/bin/cp vimrc ~/.vimrc
