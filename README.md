@@ -11,7 +11,7 @@ effect. Usually, the following will be all you need:
 ## handy notes
 - to add a new plugin: place the plug's appropriate `git clone` in the `plugins` target of
   the [Makefile](/Makefile). then, update [.gitmodules](/.gitmodules) and run
-`make plugins`.
+`make install` to deploy them.
 - good resource for customizing: [dotfiles project](https://dotfiles.github.io/).
 - run `sudo visudo` and replace
 `Defaults env_reset` with `Defaults env_reset,insults`. Enjoy the next time you
