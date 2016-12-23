@@ -44,6 +44,7 @@ let g:rainbow_conf = {
 
 " Cool files
 au BufNewFile,BufRead *.cool setf cool 
+au BufNewFile,BufRead *.cl setf cool
 
 " hacky WQ => wq mapping, but good enough for my purposes.
 cmap W w
