@@ -72,10 +72,10 @@ xterm*|rxvt*)
     ;;
 esac
 
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.4/dist-packages/django/bin/
+#export PATH="$HOME/.pyenv/bin:$PATH"
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
+#export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.4/dist-packages/django/bin/
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -125,6 +125,6 @@ fi
 
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+#export PATH="/usr/local/heroku/bin:$PATH"
+#export PATH="$HOME/.rbenv/bin:$PATH"
+#eval "$(rbenv init -)"
