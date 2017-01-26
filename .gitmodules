@@ -1,18 +1,18 @@
-[submodule "vim/bundle/rust.vim"]
-	path = vim/bundle/rust.vim
-  url = https://github.com/rust-lang/rust.vim.git
-[submodule "vim/bundle/cool.vim"]
-	path = vim/bundle/cool.vim
-  url = https://github.com/vim-scripts/cool.vim
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/bundle/rust.vim"]
+	path = vim/bundle/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git
+[submodule "vim/bundle/cool.vim"]
+	path = vim/bundle/cool.vim
+	url = https://github.com/vim-scripts/cool.vim
 [submodule "vim/bundle/rainbow"]
 	path = vim/bundle/rainbow
-  url = https://github.com/luochen1990/rainbow.git
+	url = https://github.com/luochen1990/rainbow.git
 [submodule "vim/bundle/nerdcommenter"]
 	path = vim/bundle/nerdcommenter
-  url = git clone https://github.com/scrooloose/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter
 [submodule "vim/bundle/vim-gitgutter"]
 	path = vim/bundle/vim-gitgutter
-  url = git clone git clone https://github.com/airblade/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
