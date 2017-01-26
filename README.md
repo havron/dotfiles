@@ -1,6 +1,7 @@
 # dotfiles
 [![GitHub release](https://img.shields.io/github/release/samuelhavron/dotfiles.svg)](https://github.com/samuelhavron/dotfiles/releases/latest)
 
+
 My default settings for development. To install, read the [Makefile](/Makefile) and build the
 targets you desire, then spawn a new terminal instance to see relevant changes take
 effect. Usually, the following will be all you need:
