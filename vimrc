@@ -46,9 +46,13 @@ let g:rainbow_conf = {
 au BufNewFile,BufRead *.cool setf cool 
 au BufNewFile,BufRead *.cl setf cool
 
-" hacky WQ => wq mapping, but good enough for my purposes.
-cmap W w
-cmap Q q
+" shift (:) will never haunt me again! wQ will, though.
+command! Q q
+command! W w
+command! WQ wq
+command! Wq wq
+"cmap W w
+"cmap Q q
 " move to beginning/end of line, just use lower 'e' and 'b' for normal word
 " navigation
 nnoremap B ^
