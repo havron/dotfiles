@@ -69,6 +69,8 @@ plugins:
 	git submodule add --force https://github.com/airblade/vim-gitgutter ./vim/bundle/vim-gitgutter
 
 cornell:
+	sudo apt-get install nodejs
+	sudo apt-get install npm
 	curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
 	nvm install node
 	curl https://raw.githubusercontent.com/mrkev/cornell/master/lib/install.sh | bash
