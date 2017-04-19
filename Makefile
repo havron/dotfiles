@@ -69,13 +69,12 @@ plugins:
 	git submodule add --force https://github.com/airblade/vim-gitgutter ./vim/bundle/vim-gitgutter
 
 cornell:
-	sudo apt-get install nodejs
-	sudo apt-get install npm
+	sudo apt-get install nodejs npm
 	curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
 	export NVM_DIR="$HOME/.nvm"
 	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 	nvm install node
-	curl https://raw.githubusercontent.com/mrkev/cornell/master/lib/install.sh | bash
+	npm install -g cornell
 
 debian: downstream
 	@echo "\nPACKAGES (DEBIAN)\n${HR}"
