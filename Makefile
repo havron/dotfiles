@@ -1,4 +1,4 @@
-.PHONY: downstream upstream deploy vim bash bin plugins debian arch install git cornell
+.PHONY: downstream upstream deploy vim bash bin plugins debian arch install git cornell tmux
 MSG=small edit (submodules updated, probably)
 REPO=dotfiles
 HR="-----------------------------------------------------------------------------------"
@@ -18,7 +18,7 @@ upstream: downstream
 
 install: plugins deploy
 
-deploy: downstream vim bash git
+deploy: downstream vim bash git tmux
 	@echo "\nDEPLOY\n${HR}"
 	@echo "dotfiles installed successfully."
 	@echo "\nrun 'make bin' to deploy binaries (requires root privileges!)"
@@ -32,6 +32,12 @@ vim: downstream
 	@echo "deploying vim configuration..."
 	/bin/cp vimrc ~/.vimrc
 	@echo ".vimrc installed. SPAWN A NEW TERMINAL INSTANCE TO SEE CHANGES."
+
+tmux: downstream
+	@echo "\n$@\n${HR}"
+	@echo "deploying $@ configuration..."
+	/bin/cp tmux.conf ~/.tmux.conf
+	@echo ".$@.conf installed."
 
 bash: downstream
 	@echo "\nBASH\n${HR}"
